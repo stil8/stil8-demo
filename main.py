@@ -23,7 +23,7 @@ user_input = st.text_input("Scrivi qui la tua domanda di moda:")
 if user_input:
     with st.spinner("Stil8 sta pensando al look perfetto..."):
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": stil8_prompt},
                 {"role": "user", "content": user_input},
